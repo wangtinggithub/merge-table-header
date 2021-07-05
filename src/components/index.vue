@@ -1,53 +1,28 @@
 <template>
   <div>
-    <el-table
-        :data="tableData"
-        style="width: 100%">
-      <el-table-column
-          prop="date"
-          label="日期"
-          width="150">
-      </el-table-column>
-      <el-table-column label="配送信息">
-        <el-table-column
-            prop="name"
-            label="姓名"
-            width="120">
-        </el-table-column>
-        <el-table-column label="地址">
-          <el-table-column
-              prop="province"
-              label="省份"
-              width="120">
-          </el-table-column>
-          <el-table-column
-              prop="city"
-              label="市区"
-              width="120">
-          </el-table-column>
-          <el-table-column
-              prop="address"
-              label="地址"
-              width="300">
-          </el-table-column>
-          <el-table-column
-              prop="zip"
-              label="邮编"
-              width="120">
-          </el-table-column>
-        </el-table-column>
-      </el-table-column>
+    <el-table :data="tableData.data" style="width: 100%">
+      <template>
+        <tableItem v-for="(item,key) in tableData.head" :key="key" :item="item"/>
+      </template>
+      <template #empty>无数据展示次内筒</template>
     </el-table>
   </div>
 
 </template>
 
 <script>
+import tableItem from './table-item'
 export default {
-  name: "index"
+  name: "mergeTableHeader",
+  components:{
+    tableItem
+  },
+  props:{
+    tableData:{
+      type: [Object],
+      required: true
+    }
+  }
 }
 </script>
 
-<style scoped>
-
-</style>
