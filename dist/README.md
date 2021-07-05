@@ -1,16 +1,24 @@
-<template>
-  <div id="app">
-    <mergeTableHeader :tableData="tableData"></mergeTableHeader>
-  </div>
-</template>
+# mergeTableHeader
 
-<script>
+> 基于vue的动态表头渲染组件
+ ### Install
 
-export default {
-  name: 'App',
-  data(){
-    return {
-      tableData:{
+``` bash
+npm i merge-table-header --save
+```
+
+### Usage
+``` bash
+import mergeTableHeader from 'merge-table-header'
+
+Vue.use(mergeTableHeader);
+
+<mergeTableHeader  :tableData="tableData"></essay>
+```
+
+> 传参如下 head
+``` 
+ tableData:{
         head:[
           {
             prop: 'date',
@@ -97,20 +105,6 @@ export default {
           city: '普陀区',
           address: '上海市普陀区金沙江路 1518 弄',
           zip: 200333
-        }],
+        }]
       }
-    }
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+```

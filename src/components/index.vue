@@ -4,7 +4,7 @@
       <template>
         <tableItem v-for="(item,key) in tableData.head" :key="key" :item="item"/>
       </template>
-      <template #empty>无数据展示次内筒</template>
+      <template #empty>无数据展示</template>
     </el-table>
   </div>
 
