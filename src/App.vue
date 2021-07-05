@@ -5,9 +5,12 @@
 </template>
 
 <script>
-
+import mergeTableHeader from './components/index'
 export default {
   name: 'App',
+  components:{
+    mergeTableHeader
+  },
   data(){
     return {
       tableData:{
