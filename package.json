@@ -1,6 +1,6 @@
 {
   "name": "merge-table-header",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "main": "dist/mergeTableHeader.umd.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11",
-    "merge-table-header": "^0.1.0"
+    "merge-table-header": "^0.1.2"
   },
   "eslintConfig": {
     "root": true,
