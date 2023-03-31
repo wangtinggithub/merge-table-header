@@ -8,13 +8,13 @@
 // import mergeTableHeader from './components/index'
 export default {
   name: 'App',
- /* components:{
-    mergeTableHeader
-  },*/
-  data(){
+  /* components:{
+     mergeTableHeader
+   },*/
+  data () {
     return {
-      tableData:{
-        head:[
+      tableData: {
+        head: [
           {
             prop: 'date',
             label: '日期'
@@ -42,7 +42,7 @@ export default {
                     label: '地址',
                   },
                   {
-                    prop: 'zip',
+                    prop: 'postcode',
                     label: '邮编',
                   },
                 ]
@@ -50,10 +50,32 @@ export default {
             ]
           },
         ],
-        data:[
-            ],
+        data: [
+        ],
       }
     }
+  },
+  created () {
+    this.serList()
+
+  },
+  methods: {
+    serList () {
+      for (let i = 0; i < 10; i++) {
+        this.tableData.data.push({
+          date: '2023-03-31',
+          name: '小王',
+          province: '北京市',
+          city: '海淀区',
+          address: '联想总部西区',
+          postcode: '100190',
+
+
+
+        })
+      }
+    }
+
   }
 }
 </script>
